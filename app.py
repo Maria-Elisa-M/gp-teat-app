@@ -172,6 +172,7 @@ content = html.Div(
 ], id="page-content", style=CONTENT_STYLE)
 app = Dash(__name__, external_stylesheets=[dbc.themes.DARKLY])
 app.layout = html.Div([dcc.Location(id="url"), sidebar, content])
+server = app.server
 
 @app.callback(
     Output("graph", "figure"),

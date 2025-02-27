@@ -188,7 +188,6 @@ def get_frames(file_name, p, q):
     point_dict, t, disp = get_lines(teat, raw)
     teat_len = np.round(get_length(point_dict) * 100, 2)
     new_dict = point_to_udder(udder, point_dict, t, disp)
-    print(teat_len)
     if p == 1:
         coords = get_plane(teat)
         fig = plot_teat(teat, coords, point_dict)
